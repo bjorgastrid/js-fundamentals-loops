@@ -5,8 +5,11 @@ const {
   average,
   largest,
   smallest,
-  median
+  median, 
+  nums
 } = require('../../src/advanced/advanced')
+
+const sorted = [-9, -5, -4, -2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
 
 describe('advanced', () => {
   // 1. Use a for loop to set the variable hasTen to true if the array contains the value 10
@@ -38,5 +41,9 @@ describe('advanced', () => {
   // 6. find the median of the numbers in the array
   it('Check median', () => {
     expect(median).toBe(3)
+  })
+
+  it('Check if sorted', () => {
+    expect(nums).toEqual(sorted)
   })
 })
